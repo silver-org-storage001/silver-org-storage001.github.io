@@ -1,0 +1,24 @@
+<html>
+<head>
+  <script>
+      function getPage() {
+        //fetch('https://www.google.com/search?q=nvidia+share+price', {mode: 'no-cors'})
+        fetch('https://finance.yahoo.com/quote/NVDA/')
+          .then(response => response.text())
+          .then(data => {
+            //document.querySelector('#user-name').textContent = data.name
+            //document.querySelector('#user-email').textContent = data.email
+            alert(JSON.stringify(data))
+          })
+      }
+  </script>
+</head>
+<body>
+  <h1 id='user-name'>Waiting for data</h1>
+  <h2 id='user-email'>Waiting for data</h1>
+
+  <input type="button" value="Get Page" onClick="getPage()"/>
+</body>
+
+
+</html>
